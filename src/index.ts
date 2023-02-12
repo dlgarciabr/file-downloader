@@ -14,6 +14,7 @@ const downloadPath = path.resolve('./download');
 
 app.get('/', async (req, res) => {
   try {
+    console.log('Initializing download of file...')
     const filesToRemove = fs.readdirSync(downloadPath);
     if (filesToRemove.length > 0) {
       filesToRemove.forEach(file => {
