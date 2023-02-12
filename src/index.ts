@@ -4,7 +4,7 @@ const path = require('path');
 const playwright = require('playwright-core');
 
 const app = express()
-const port = 80;
+const port = 3000;
 
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
     const filesToRemove = fs.readdirSync(downloadPath);
     if (filesToRemove.length > 0) {
       filesToRemove.forEach(file => {
-        fs.unlinkSync(`${downloadPath}/${file}`);
+        fs.unlinkSync(`${downloadPath}/${file[0]}`);
       });
     }
 
