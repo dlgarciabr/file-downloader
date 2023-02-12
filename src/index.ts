@@ -4,7 +4,7 @@ const path = require('path');
 const playwright = require('playwright-core');
 
 const app = express()
-const port = 3001
+const port = 80;
 
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
